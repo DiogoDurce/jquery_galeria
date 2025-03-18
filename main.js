@@ -10,10 +10,10 @@ $(document).ready(function(){
     $('form').on('submit', function(e) {
         e.preventDefault();
         const enderecoDaNovaImagem = $('#endereco-imagem-nova').val();
-        const novoItem = $ ('<li style="display:  "></li>');
-        $(`<img src = "${enderecoDaNovaImagem}" />`
-        ).appendTo(novoItem);
-        $(`<div class="overlay-imagem-link">
+        const novoItem = $('<li style="display: none"></li>');
+        $(`<img src = "${enderecoDaNovaImagem}" />`).appendTo(novoItem);
+        $(`
+            <div class="overlay-imagem-link">
                 <a href="${enderecoDaNovaImagem}" target="_blank" title="Ver imagfen em tamanho real"
                     Ver imagem em tamanho real
                 </a>
